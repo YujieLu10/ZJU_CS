@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/container"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.cube.autlab.file.FileActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar" />
+        <SeekBar
+            android:id="@+id/SeekBar02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="12dp"
+            android:max="200"
+            android:paddingRight="12dp"
+            android:paddingTop="3dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="开始标注" />
+
+            <Button
+                android:id="@+id/btn_na"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="国家"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/btn_state"
+                android:layout_toEndOf="@+id/btn_state" />
+
+            <Button
+                android:id="@+id/btn_ci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btn_na"
+                android:layout_toRightOf="@+id/btn_na"
+                android:text="城市" />
+            <Button
+                android:id="@+id/btn_r_na_ci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btn_ci"
+                android:layout_toRightOf="@+id/btn_ci"
+                android:text="城市-国家" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn_state"
+                android:text="人名" />
+
+            <Button
+                android:id="@+id/btn_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_na"
+                android:layout_toEndOf="@+id/btn_state"
+                android:layout_toRightOf="@+id/btn_state"
+                android:text="时间" />
+
+            <Button
+                android:id="@+id/btn_authority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_na"
+                android:layout_toEndOf="@+id/btn_time"
+                android:layout_toRightOf="@+id/btn_time"
+                android:text="机构" />
+
+            <Button
+                android:id="@+id/btn_pena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/scroll_view"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="人名-国籍" />
+        </LinearLayout>
+
+        <com.cube.autlab.UI.UIScrollView
+
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/btn_state"
+            android:id="@+id/scroll_view"
+            android:padding="20dp"
+            android:layout_centerHorizontal="true"
+            android:overScrollMode="always"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.cube.autlab.UI.SelectionTextView
+                android:id="@+id/text_view"
+                android:text="请先点击右上角选取示例文本或通过目录选择文本或通过下方导航栏搜索文本\n选中文本后，点击开始标注即可进行标注\n实体标注：\n先选中文字，再点击相应的实体按钮（如 国家），即可实现实体标注。\n关系标注：\n先点击关系按钮(如 人名/国籍 )，再依照顺序依次选中两段文字，即可标注这两段文字的关系。"
+                android:textSize="16sp"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="35dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.cube.autlab.UI.UIScrollView>
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/messagetxt"-->
+            <!--android:text="@string/title_home"-->
+            <!--android:layout_marginTop="100dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scrollbars="vertical"-->
+            <!--android:singleLine="false"/>-->
+    </LinearLayout>
+<android.support.design.widget.BottomNavigationView
+    android:id="@+id/navigation2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="0dp"
+    android:layout_marginStart="0dp"
+    android:background="?android:attr/windowBackground"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:menu="@menu/navigation"/>
+</android.support.constraint.ConstraintLayout>
+
+

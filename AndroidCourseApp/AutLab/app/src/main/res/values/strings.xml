@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">标注工具</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">标注</string>
+    <string name="title_notifications">搜索文本</string>
+    <string name="title_json">JSON预览</string>
+    <string name="title">My Description</string>
+    <string name="context_menu">Context menu</string>
+    <string name="inSave">保存</string>
+    <string name="inRead">读取</string>
+    <string name="ReadTxt">Rtxt</string>
+    <string name="Orientation">orientation</string>
+    <string name="Handle">标注</string>>
+    <string name="SavaJson">导出JSON</string>
+    <string name="hello">hello</string>
+    <string name="no_permission">没有权限</string>
+    <string name="action_edit">示例文本</string>
+    <string name="action_settings">横竖切换</string>
+    <string name="action_save">保存文本</string>
+    <string name="action_file">文本目录</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_json">导出JSON</string>
+    <string name="action_pre">预览JSON</string>
+    <string name="help">1.右上角工具栏 : \n
+    a.示例文本 : 选取示例文本显示  b.文本目录 : 浏览文件目录选择打开，删除或重命名  c.保存文本 : 输入存储文件名进行保存  d.横竖屏切换 : 横竖屏的切换  e.导出JSON : 直接导出JSON格式  f.预览JSON : 先预览JSON格式，可选是否导出  g.查看JSON : 查看标注结果\n
+    \n2.标注 : 横向拖拉上方圆点改变字体大小\n
+    \n3.搜索文本 : 输入完整文本名搜索并显示文本\n
+    \n4.JSON预览 : 预览JSON标注结果界面并可选择保存与显示\n
+    \n基本操作流程举例\n 1.\t点击下方导航栏 标注\n 2.\t点击右上角工具栏中的选取示例\n 3.\t点击开始标注根据标注帮助信息进行标注\n4.右上角工具栏点击 预览JSON\n5.\t进入预览界面，点击上方导出JSON按钮实现导出功能\n
+    \n查看之前保存的JSON文本:点击下方导航栏搜索输入已保存的JSON文件名即可查看（提醒：文件名全称，不加路径，不加后缀）</string>
+</resources>

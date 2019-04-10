@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cube.autlab.Activities.JSONActivity">
+    <!--<include layout="@layout/toolbar" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_ex"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/divider_color"
+            android:text="@string/action_json"/>
+        <Button
+            android:id="@+id/btn_pre"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/divider_color"
+            android:text="@string/action_pre"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/message"
+        android:text="先点击 预览JSON 预览标注结果\n再点击 导出JSON  导出标注结果\n导出的JSON格式标注结果可在搜索文本界面输入JSON文本名搜索并查看"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:scrollbars="vertical"
+        android:singleLine="false"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation"/>
+
+</android.support.constraint.ConstraintLayout>
