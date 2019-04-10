@@ -1,0 +1,3 @@
+点击MenuBar的Open通过filechooser选择CSV文件显示
+当表格不再是编辑模式时，点击MenuBar的Save保存之前发生的改变
+可以重新打开已更改的csv文件并继续更改
